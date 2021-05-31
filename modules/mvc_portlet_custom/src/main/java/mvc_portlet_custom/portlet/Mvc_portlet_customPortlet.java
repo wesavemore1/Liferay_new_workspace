@@ -1,6 +1,6 @@
-package Login.portlet;
+package mvc_portlet_custom.portlet;
 
-import Login.constants.LoginPortletKeys;
+import mvc_portlet_custom.constants.Mvc_portlet_customPortletKeys;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
@@ -17,14 +17,14 @@ import org.osgi.service.component.annotations.Component;
 		"com.liferay.portlet.display-category=category.sample",
 		"com.liferay.portlet.header-portlet-css=/css/main.css",
 		"com.liferay.portlet.instanceable=true",
-		"javax.portlet.display-name=Login",
+		"javax.portlet.display-name=Mvc_portlet_custom",
 		"javax.portlet.init-param.template-path=/",
 		"javax.portlet.init-param.view-template=/view.jsp",
-		"javax.portlet.name=" + LoginPortletKeys.LOGIN,
+		"javax.portlet.name=" + Mvc_portlet_customPortletKeys.MVC_PORTLET_CUSTOM,
 		"javax.portlet.resource-bundle=content.Language",
 		"javax.portlet.security-role-ref=power-user,user"
 	},
 	service = Portlet.class
 )
-public class LoginPortlet extends  MVCPortlet {
+public class Mvc_portlet_customPortlet extends MVCPortlet {
 }
