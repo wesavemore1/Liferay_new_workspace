@@ -8,6 +8,9 @@ buildscript {
 		maven {
 			url "https://repository-cdn.liferay.com/nexus/content/groups/public"
 		}
+                 maven {
+		 url "http://localhost:8081/repository/Custom_Repo/"
+		 }
 	}
 }
 
