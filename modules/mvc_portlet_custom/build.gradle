@@ -1,5 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+    maven {
+          url "http://localhost:8081/repository/Custom_Repo/"
+    }
+}
+
+
+
 dependencies {
 	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
 
 	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
 }
+
+uploadArchives {
+    repositories {
+       mavenDeployer {
+			    repository(url: "http://localhost:8081/repository/Custom_Repo/") 
+			             {
+			             authentication(userName: "admin", password: "Liferay1!")
+							}
+             pom.version = "1.0"
+             pom.artifactId = "mvc_portlet_custom"
+             pom.groupId = "com.example"
+       				}
+  				}
+			}
