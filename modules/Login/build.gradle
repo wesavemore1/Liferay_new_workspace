@@ -22,7 +22,7 @@ uploadArchives {
 			             authentication(userName: "admin", password: "Liferay1!")
 							}
              pom.version = "1.0"
-             pom.artifactId = "mvc_portlet_custom"
+             pom.artifactId = "Login"
              pom.groupId = "com.example"
        				}
   				}
